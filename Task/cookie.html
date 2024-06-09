@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+
+        body{
+            background-color: black;
+            color: aliceblue;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+        .form {
+            width: 300px;
+            margin: 30vh auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .index,
+        .index2,
+        .index3 {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .btn {
+            text-align: center;
+        }
+
+        .btn input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="form">
+        <div class="index">
+            EMAIL:<input type="text" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="index2">
+            PAASWORD:<input type="password" name="password" id="pass" placeholder="Enter your password">
+        </div>
+        <div class="index3">
+            Remind me :<input type="checkbox" name="cheakbox" id="remide">
+        </div>
+        <div class="btn">
+            <input type="submit" value="Sign up" class="btn" onclick="validateForm()">
+        </div>
+    </div>
+    <script>
+        function setCookies() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('pass').value;
+            document.cookie = "email=" + email;
+            document.cookie = "password=" + password;
+        }
+        
+        // Replace with your desired URL
+
+        function validateForm() {
+            var emailInput = document.getElementById("email").value;
+            var passwordInput = document.getElementById("pass").value;
+
+            var validEmail = "mihirkalariya7126@gmail.com";
+            var validPassword = "Mihir7126";
+
+            if (emailInput === validEmail && passwordInput === validPassword) {
+
+                alert("Email and password are correct. Form submitted.");
+
+                window.location.href = "https://www.amazon.in";
+
+
+            } else {
+
+                alert("Email or password is incorrect. Form not submitted.");
+            }
+        }
+    </script>
+</body>
+
+</html>

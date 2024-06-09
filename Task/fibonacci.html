@@ -1,0 +1,31 @@
+<!-- WAP to fibonacci series -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i ,n = 10;
+
+        let fn = 0, sn = 1;
+
+        let tn = fn + sn;
+
+        document.write(fn +", " , sn + ", ");
+        for(i = 3; i <= n; ++i)
+        {
+            document.write(tn + ", ");
+
+            fn = sn;
+            sn = tn;
+            tn = fn +sn;
+        }
+
+
+    </script>
+</body>
+</html>

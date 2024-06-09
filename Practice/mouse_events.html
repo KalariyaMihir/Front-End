@@ -1,0 +1,48 @@
+<!-- Practice of mouse events -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Photo</th>
+            <th>product Name</th>
+            <th>Select Qty.</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>01</td>
+            <td></td>
+            <td>HP LAPTOP</td>
+            <td><input type="number" id="qty" min="1" max="5" value="1" onchange="change()"></td>
+            <td>Rs. <input type="text" readonly id="price" value="75000" style="color:rgb(52, 52, 228); border:none;" ></td>
+            <td><a href="">Delete</a></td>
+        </tr>
+
+        <tr>
+            <td colspan="6"><h3>Total Amount is : <span id="total">75000</span></h3></td>
+        </tr>
+    </table>
+
+    <script>
+        function change()
+        {
+            let quantity = parseInt(document.getElementById("qty").value);
+            let price = parseInt(document.getElementById("price").value);
+            let total = quantity * price;
+
+            document.getElementById("total").innerText=total;
+        } 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- Wap to find simple interest -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <script>
+        let final_amount ;
+        let principle_amount = parseInt(prompt("Enter You Amount : "));
+        let rate = parseFloat(prompt("Enter interest time : "));
+        let time = parseInt(prompt("Enter Your Time (in Years) : "));
+
+        
+        document.write(`Total Amount is  : ${principle_amount} <br>`);
+        document.write(`Interest Rate is : ${rate} <br>`);
+        document.write(`Time Duration (in years) : ${time} <br>`);
+        // document.write(`Total Principle amount with interest is : ${final_amount}`);
+        final_amount = (principle_amount * rate * time) / 100;
+
+        document.write(`Total interest is : ${final_amount}`);
+        document.write(`Total Principle amount with interest is : ${principle_amount + final_amount}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- Practice of user input -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User input</title>
+</head>
+<body>
+    Enter First Number : <input type="number" placeholder="First Number" id="n1">
+    Enter Second Number : <input type="number" placeholder="Second Number" id="n2">
+
+    <p id="output"></p>
+    <br><br>
+
+    <button type="button" onclick="sum()">Sum</button>
+
+    <script>
+
+        function sum(){
+
+            let number1 = parseInt(document.querySelector("#n1").value);
+            let number2 = parseInt(document.querySelector("#n2").value);
+         
+            let addition = number1 + number2; 
+
+            ans = document.querySelector("#output").innerHTML = `Answer of ${number1} and ${number2} = ${addition}`;
+        }
+    </script>
+</body>
+</html>
